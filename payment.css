@@ -1,0 +1,138 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(55, 58, 66, 1);
+}
+h2 {
+  font-size: 14px;
+}
+h1 {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.outer {
+  background-color: #f4f7ff;
+}
+.left {
+  flex: 50%;
+}
+.right {
+  flex: 50%;
+}
+.inner {
+  background-color: white;
+  border: 1px white solid;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.inner-separator {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.blue {
+  font-size: 24px;
+  font-weight: 600;
+  color: blue;
+}
+.red {
+  font-size: 24px;
+  font-weight: 600;
+  color: red;
+}
+.upper-content {
+  margin-right: 20px;
+}
+.payment {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.payment-more {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.btn-payment {
+  border: none;
+  background-color: white;
+}
+.btn-payment-more {
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+  font-size: 24px;
+  border: 1px #3366ff dashed;
+  color: #3366ff;
+  background-color: white;
+}
+.payment-detail {
+  margin-left: 30px;
+  width: 363px;
+  height: 314px;
+}
+.payment-detail-text {
+  display: flex;
+  justify-content: space-around;
+}
+.payment-text {
+  text-align-last: right;
+  color: rgba(51, 102, 255, 1);
+}
+.button {
+  margin-top: 30px;
+  border: none;
+  width: 320px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #3366ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px #3366ff;
+}
+.article {
+  text-decoration: none;
+  color: #3366ff;
+  font-size: 12px;
+  font-weight: 500;
+}
+.lower {
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.logo-lower {
+  margin-left: 170px;
+}
+.lower-content-text {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(193, 197, 208, 1);
+}

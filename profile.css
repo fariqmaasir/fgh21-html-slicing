@@ -1,0 +1,156 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(55, 58, 66, 1);
+}
+h2 {
+  font-size: 14px;
+}
+h1 {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.outer {
+  background-color: #f4f7ff;
+}
+.left-outer{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.left-profile{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.user-left-outer{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.left {
+  flex: 50%;
+  display: flex;
+}
+.right {
+  flex: 50%;
+}
+.right-profile{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.content-profile{
+  display: flex;
+}
+.profile-box{
+  align-items: center;
+  border: 1px solid rgba(193, 197, 208, 1);
+  width: 315px;
+  height: 55px;
+}
+.profile-edit-fam{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.profile-navigation{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  left: 20%;
+}
+.border-profile{
+  width: 21px;
+  height: 21px;
+}
+.icon-profile{
+  width: 100%;
+}
+.navigation-side-content{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.edit-navigation{
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  position: relative;
+  left: 20%;
+}
+.inner {
+  position: relative;
+  background-color: white;
+  border: 1px white solid;
+  border-radius: 20px;
+  width: 926px;
+  height: 825px;
+  top: 50px;
+  left: 7%;
+  padding-top: 60px;
+}
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.inner-separator {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.blue {
+  font-size: 24px;
+  font-weight: 600;
+  color: blue;
+}
+.red {
+  font-size: 24px;
+  font-weight: 600;
+  color: red;
+}
+.upper-content {
+  margin-right: 20px;
+}
+.button {
+  margin-top: 30px;
+  border: none;
+  width: 320px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #3366ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px #3366ff;
+}
+
+.lower {
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.logo-lower {
+  margin-left: 170px;
+}
+.lower-content-text {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(193, 197, 208, 1);
+}

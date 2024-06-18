@@ -114,12 +114,6 @@ h1 {
   font-weight: 600;
   box-shadow: 3px 3px 3px #3366ff;
 }
-.article {
-  text-decoration: none;
-  color: #3366ff;
-  font-size: 12px;
-  font-weight: 500;
-}
 .lower {
   margin-top: 100px;
   width: 90%;

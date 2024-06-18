@@ -19,7 +19,9 @@
   border-radius: 20px;
   width: 80%;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .upper{
     display: flex;
@@ -27,6 +29,10 @@
     align-items: center;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
+}
+.logo{
+  display: flex;
+  align-items: center;
 }
 .inner-separator {
   display: flex;
@@ -41,7 +47,8 @@ h4 {
   font-size: 14px;
 }
 .user {
-  width: 20%;
+  display: flex;
+  align-items: center;
 }
 .attributes {
   width: 2%;
@@ -78,4 +85,20 @@ button {
   color: #3366ff;
   font-size: 12px;
   font-weight: 500;
+}
+.lower{
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.logo-lower{
+  margin-left: 170px;
+}
+.lower-content-text{
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(193, 197, 208, 1);
 }

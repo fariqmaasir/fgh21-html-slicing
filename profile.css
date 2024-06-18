@@ -17,6 +17,7 @@ h1 {
 .left-outer{
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
   gap: 30px;
 }
 .left-profile{
@@ -26,7 +27,7 @@ h1 {
 }
 .user-left-outer{
   display: flex;
-  align-items: center;
+  align-items: center;  
   gap: 15px;
 }
 .left {
@@ -111,6 +112,29 @@ h1 {
 .user {
   display: flex;
   align-items: center;
+  gap: 15px;
+}
+.circle-border{
+  width: 55px;
+  height: 55px;
+  border: 2px solid transparent;
+  background:  linear-gradient(#fff, #fff) padding-box,
+  linear-gradient(45deg,rgba(51, 102, 255, 1),rgba(35, 149, 255, 1),rgba(35, 149, 255, 1),rgba(136, 77, 255, 1))border-box;
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-border{
+  width: 47px;
+  height: 47px;
+  border-radius: 47px;
+}
+.img-icon-user{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .blue {
   font-size: 24px;
@@ -153,4 +177,93 @@ h1 {
   font-weight: 500;
   font-size: 14px;
   color: rgba(193, 197, 208, 1);
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.title-content {
+  font-size: 20px;
+  font-weight: 600;
+}
+.content-profile {
+  display: flex;
+}
+.left-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.right-content{
+  width: 255px;
+  height: 303px;
+}
+.content {
+  display: flex;
+  align-items: center;
+}
+.content-with-box {
+  display: flex;
+  align-items: center;
+}
+.text {
+  width: 153px;
+}
+.text-edit{
+  display: flex;
+  gap: 15px;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 15px;
+  width: 315px;
+  height: 55px;
+}
+.button{
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  color: rgba(51, 102, 255, 1);
+  border: 1px solid rgba(51, 102, 255, 1);
+  border-radius: 10px;
+}
+.down-img{
+  width: 24px;
+  height: 24px;
+}
+.btn{
+  color: white;
+  width: 315px;
+  height: 61px;
+  border: none;
+  box-shadow: 0 8px 10px rgba(35, 149, 255, 0.3);
+  border-radius: 15px;
+  background-color: rgba(51, 102, 255, 1);
+}
+.circle-border{
+  width: 55px;
+  height: 55px;
+  border: 2px solid transparent;
+  background:  linear-gradient(#fff, #fff) padding-box,
+  linear-gradient(45deg,rgba(51, 102, 255, 1),rgba(35, 149, 255, 1),rgba(35, 149, 255, 1),rgba(136, 77, 255, 1))border-box;
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-border{
+  width: 47px;
+  height: 47px;
+  border-radius: 47px;
+}
+.img-icon-user{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }

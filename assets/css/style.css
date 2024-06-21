@@ -26,11 +26,11 @@ body{
     justify-content: space-between;
     align-items: center;
   }
-  .img-upper img{
-    padding-top: 120px;
-  }
 }
-
+.menu button{
+  background-color: transparent;
+  border: transparent;
+}
 .upper {
   display: flex;
   justify-content: space-between;
@@ -88,7 +88,7 @@ body{
   color: red;
 }
 .img-upper{
-  background-image: url(Mask\ Group\ \(1\).png);
+  background-image: url(/assets/img/bubble.png);
   background-color: rgba(51, 102, 255, 1);
   background-repeat: no-repeat;
   background-size: cover;
@@ -183,7 +183,7 @@ body{
 .center{
   height: 700px;
   background-color: blue;
-  background-image: url(Mask\ Group\ \(1\).png);
+  background-image: url(/assets/img/bubble.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -257,7 +257,7 @@ body{
 .lower-{
   padding-top: 100px;
   height: 450px;
-  background-image: url(Mask\ Group\ \(1\).png);
+  background-image: url(/assets/img/bubble.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #373A42;

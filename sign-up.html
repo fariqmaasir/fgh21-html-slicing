@@ -12,25 +12,43 @@
   <body>
     <div class="base">
       <div class="left">
-        <img class="img-login" src="./assets/icon/login.png" alt="" />
+        <div>
+          <img class="img-login" src="./assets/img/login.png" alt="" />
+        </div>
       </div>
       <div class="right">
         <div class="logo">
-          <img src="./assets/img/logo.png" alt="" />
+          <img src="./assets/icon/logo.png" alt="" />
           <span class="blue">We<span class="red">tick</span></span>
         </div>
         <h1>Sign Up</h1>
-        <h3>Already have account? <a class="login" href="#">log in</a></h3>
-        <div>
-          <input class="input" type="text" placeholder="Full Name" />
-          <input class="input" type="text" placeholder="Email" />
-          <input class="input" type="text" placeholder="Password" />
-          <input class="input" type="text" placeholder="Confirm Password" />
-          <input type="checkbox" name="" id="" class="checkbox"/>Accept terms and condition
+        <h3>Already have account? <a class="login" href="sign-in.html">Log In</a></h3>
+        <form class="input-form">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" />
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Email" />
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Password" />
+            <div>
+              <img src="./assets/icon/eyes.png" alt="">
+            </div>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Confirm Password" />
+            <div>
+              <img src="./assets/icon/eyes.png" alt="">
+            </div>
+          </div>
+          <div>
+            <input type="checkbox" name="" id=""/>Accept terms and condition
+          </div>
           <div>
             <button>Sign Up</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </body>

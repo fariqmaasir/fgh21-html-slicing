@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/sign-up.css" />
+    <link rel="stylesheet" href="./assets/css/sign.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -23,33 +23,50 @@
         </div>
         <h1>Sign Up</h1>
         <h3>Already have account? <a class="login" href="sign-in.html">Log In</a></h3>
-        <form class="input-form">
+        <form class="input-form" onsubmit="checkData(event)">
           <div class="input-box">
-            <input type="text" placeholder="Full Name" />
+            <input type="text" placeholder="Full Name" name="name"/>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Email" name="email"/>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Password" />
+            <input type="text" placeholder="Password" name="password"/>
             <div>
               <img src="./assets/icon/eyes.png" alt="">
             </div>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Confirm Password" />
+            <input type="text" placeholder="Confirm Password" name="confirmPassword"/>
             <div>
               <img src="./assets/icon/eyes.png" alt="">
             </div>
           </div>
           <div>
-            <input type="checkbox" name="" id=""/>Accept terms and condition
+            <input type="checkbox" name="terms" id=""/>Accept terms and condition
           </div>
           <div>
-            <button>Sign Up</button>
+            <button type="submit">Sign Up</button>
           </div>
         </form>
       </div>
     </div>
+    <script>
+      function checkData(event) {
+        event.preventDefault()
+        const name = event.target.name.value
+        const email = event.target.email.value
+        const password = event.target.password.value
+        const confirmPassword = event.target.confirmPassword.value
+        const terms = event.target.terms.checked
+        if (password !== confirmPassword) {
+          window.alert("password not same")
+        } else if (terms == false){
+          window.alert("you should check the terms")
+        } else{
+          window.alert(`account register, welcome ${name}`)
+        }
+      }
+    </script>
   </body>
 </html>

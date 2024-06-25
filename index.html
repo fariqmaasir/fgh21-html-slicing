@@ -90,9 +90,9 @@
             <div class="event">          
               <div class="event-box">
                 <img src="./assets/img/content-1.png" alt="Exhibition Image">
-                <div class="event-detail">
-                  <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div>
+                <div class="event-detail" id="detail-1">
+                  <!-- <div>Wed, 15 Nov, 4:00 M</div>
+                  <div>Sights & Sounds Exhibition</div> -->
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -105,9 +105,9 @@
               </div>
               <div class="event-box">
                 <img src="./assets/img/content-2.png" alt="Exhibition Image">
-                <div class="event-detail">
-                  <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div>
+                <div class="event-detail" id="detail-2">
+                  <!-- <div>Thu, 16 Nov, 7:00 PM</div>
+                  <div>See it in Gold Class</div> -->
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -120,9 +120,9 @@
               </div>
               <div class="event-box">
                 <img src="./assets/img/content-1.png" alt="Exhibition Image">
-                <div class="event-detail">
-                  <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div>
+                <div class="event-detail" id="detail-3">
+                  <!-- <div>Wed, 15 Nov, 4:00 M</div>
+                  <div>Sights & Sounds Exhibition</div> -->
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -135,9 +135,9 @@
               </div>
               <div class="event-box">
                 <img src="./assets/img/content-2.png" alt="Exhibition Image">
-                <div class="event-detail">
-                  <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div>
+                <div class="event-detail" id="detail-4">
+                  <!-- <div>Thu, 16 Nov, 7:00 PM</div>
+                  <div>See it in Gold Class</div> -->
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -150,9 +150,9 @@
               </div>
               <div class="event-box">
                 <img src="./assets/img/content-1.png" alt="Exhibition Image">
-                <div class="event-detail">
-                  <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div>
+                <div class="event-detail" id="detail-5">
+                  <!-- <div>Wed, 15 Nov, 4:00 M</div>
+                  <div>Sights & Sounds Exhibition</div> -->
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -308,7 +308,7 @@
             </div>
           </div>
           <div class="lower">
-              <div class="logo-lower">
+            <div class="logo-lower">
                 <div class="logo">
                   <img src="/assets/icon/logo.png" alt="" />
                   <span class="blue">We<span class="red">tick</span></span>
@@ -317,7 +317,7 @@
                   Find events you love with our
                   <div><img src="./assets/img/social_media.png" alt="" /></div>
                 </div>
-              </div>
+            </div>
             <div>
               <div class="lower-title-text">Wetick</div>
               <div class="lower-content-text">About us</div>
@@ -365,6 +365,21 @@
             navLog.setAttribute("style", "display: none")
           }
         }
+        const detailEventEven = ["See it in Gold Class","Thu, 16 Nov, 7:00 PM"]
+        const detailEventOdd = ["Sights & Sounds Exhibition","Wed, 15 Nov, 4:00 M"]
+        function textEventGenerate(target , array) {
+          const eventDetail = document.getElementById(target)
+          for (let index = 0; index < detailEventEven.length; index++) {
+            const text = document.createElement("div")
+            text.textContent = array[index]
+            eventDetail.prepend(text)
+          }
+        }
+        textEventGenerate("detail-1" , detailEventOdd)
+        textEventGenerate("detail-2" , detailEventEven)
+        textEventGenerate("detail-3" , detailEventOdd)
+        textEventGenerate("detail-4" , detailEventEven)
+        textEventGenerate("detail-5" , detailEventOdd)
       </script>
   </body>
 </html>

@@ -318,28 +318,14 @@
                   <div><img src="./assets/img/social_media.png" alt="" /></div>
                 </div>
             </div>
-            <div>
+            <div id="footer-1" >
               <div class="lower-title-text">Wetick</div>
-              <div class="lower-content-text">About us</div>
-              <div class="lower-content-text">Features</div>
-              <div class="lower-content-text">Blog</div>
-              <div class="lower-content-text">Payments</div>
-              <div class="lower-content-text">Mobile App</div>
             </div>
-            <div>
+            <div id="footer-2">
               <div class="lower-title-text">Features</div>
-              <div class="lower-content-text">Booking</div>
-              <div class="lower-content-text">Create Event</div>
-              <div class="lower-content-text">Discover</div>
-              <div class="lower-content-text">Register</div>
             </div>
-            <div>
+            <div id="footer-3">
               <div class="lower-title-text">Company</div>
-              <div class="lower-content-text">Partnership</div>
-              <div class="lower-content-text">Help</div>
-              <div class="lower-content-text">Terms Of Service</div>
-              <div class="lower-content-text">Privacy Policy</div>
-              <div class="lower-content-text">Sitemap</div>
             </div>
           </div> 
           <div class="copyright">
@@ -380,6 +366,22 @@
         textEventGenerate("detail-3" , detailEventOdd)
         textEventGenerate("detail-4" , detailEventEven)
         textEventGenerate("detail-5" , detailEventOdd)
+
+        const footer1 = ["About us","Features","Blog","Payments","Mobile App"]
+        const footer2 = ["Booking","Create Event","Discover","Register"]
+        const footer3 = ["Partnership","Help","Terms Of Service","Privacy Policy","Sitemap"]
+        function textFooterGenerate(target, array) {
+          const footerText = document.getElementById(target)
+          for (let index = 0; index < array.length; index++) {
+            const text = document.createElement("div")
+            text.textContent = array[index]
+            text.classList.add("lower-content-text")
+            footerText.appendChild(text)
+          }
+        }
+        textFooterGenerate("footer-1", footer1)
+        textFooterGenerate("footer-2", footer2)
+        textFooterGenerate("footer-3", footer3)
       </script>
   </body>
 </html>

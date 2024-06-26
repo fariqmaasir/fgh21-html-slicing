@@ -27,7 +27,7 @@
               <a href="index.html">Home</a>
             </span>
             <span class="upper-content">
-              <a href="">Create Event</a>
+              <a href="create-event.html">Create Event</a>
             </span>
             <span class="upper-content">
               <a href="#city">Location</a>
@@ -118,7 +118,7 @@
                     <div>It appears you haven't bought any tickets yet. Maybe try searching these?</div>
                 </div>
                 <div class="right-booking">
-                  <button type="button"> Create</button>
+                  <button id="create-event-btn" type="button"> Create</button>
                 </div>
             </div>
           </div>
@@ -162,5 +162,11 @@
         </div>
       </div>
     </div>
+    <script>
+      const createEventBtn = document.getElementById("create-event-btn")
+      createEventBtn.onclick = () =>{
+        window.location = "/create-event.html"
+      }
+    </script>
   </body>
 </html>

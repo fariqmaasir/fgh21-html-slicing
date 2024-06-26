@@ -42,9 +42,15 @@
               </div>
             </div>
             <div class="text-nav" id="text-nav">
-              <span class="upper-content">Home</span>
-              <span class="upper-content">Create Event</span>
-              <span class="upper-content">Location</span>
+              <span class="upper-content">
+                <a href="index.html">Home</a>
+              </span>
+              <span class="upper-content">
+                <a href="">Create Event</a>
+              </span>
+              <span class="upper-content">
+                <a href="#city">Location</a>
+              </span>
             </div>
             <div class="btn-nav" id="btn-nav">
               <div>
@@ -87,12 +93,12 @@
                 <div>Mon</div>
               </div>
             </div>
-            <div class="event">          
+            <div id="event" class="event">          
               <div class="event-box">
                 <img src="./assets/img/content-1.png" alt="Exhibition Image">
                 <div class="event-detail" id="detail-1">
-                  <!-- <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div> -->
+                  <div>Wed, 15 Nov, 4:00 M</div>
+                  <div>Sights & Sounds Exhibition</div>
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -103,11 +109,11 @@
                   </div>
                 </div>
               </div>
-              <div class="event-box">
+              <!-- <div class="event-box">
                 <img src="./assets/img/content-2.png" alt="Exhibition Image">
                 <div class="event-detail" id="detail-2">
-                  <!-- <div>Thu, 16 Nov, 7:00 PM</div>
-                  <div>See it in Gold Class</div> -->
+                  <div>Thu, 16 Nov, 7:00 PM</div>
+                  <div>See it in Gold Class</div>
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -117,12 +123,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="event-box">
+              </div> -->
+              <!-- <div class="event-box">
                 <img src="./assets/img/content-1.png" alt="Exhibition Image">
                 <div class="event-detail" id="detail-3">
-                  <!-- <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div> -->
+                  <div>Wed, 15 Nov, 4:00 M</div>
+                  <div>Sights & Sounds Exhibition</div>
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -132,12 +138,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="event-box">
+              </div> -->
+              <!-- <div class="event-box">
                 <img src="./assets/img/content-2.png" alt="Exhibition Image">
                 <div class="event-detail" id="detail-4">
-                  <!-- <div>Thu, 16 Nov, 7:00 PM</div>
-                  <div>See it in Gold Class</div> -->
+                  <div>Thu, 16 Nov, 7:00 PM</div>
+                  <div>See it in Gold Class</div>
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -147,12 +153,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="event-box">
+              </div> -->
+              <!-- <div class="event-box">
                 <img src="./assets/img/content-1.png" alt="Exhibition Image">
                 <div class="event-detail" id="detail-5">
-                  <!-- <div>Wed, 15 Nov, 4:00 M</div>
-                  <div>Sights & Sounds Exhibition</div> -->
+                  <div>Wed, 15 Nov, 4:00 M</div>
+                  <div>Sights & Sounds Exhibition</div>
                   <div class="attendees">
                     <div>
                         <img src="./assets/img/avatar-1.png" alt="Avatar 1">
@@ -162,7 +168,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="btn-family">
               <button class="btn-scroll"><img src="" alt="" /><img src="./assets/icon/arrow-left.png" alt=""></button>
@@ -171,7 +177,7 @@
           </div>
           <div>
             <div class="center">
-              <div class="up-">
+              <div id="city" class="up-">
                 <div class="oval-border">
                     <div class="line"></div>
                     <div>LOCATION</div>
@@ -335,6 +341,7 @@
     </body>
     </html>
       <script>
+        //navigation
         const menuBtn = document.getElementById("menu")
         const navCenter = document.getElementById("text-nav")
         const navLog = document.getElementById("btn-nav")
@@ -351,6 +358,60 @@
             navLog.setAttribute("style", "display: none")
           }
         }
+        //navigation
+
+        //event content
+        const events = [
+          {
+            title:"Sights & Sounds Exhibition",
+            date:"Wed, 15 Nov, 4:00 M",
+            img:"./assets/img/content-1.png"
+          }
+        ]
+        events.forEach( (event) =>{
+
+        })
+        const event = document.getElementById("event")
+        const eventBox = document.createElement("div")
+        eventBox.classList.add("event-box")
+
+        const img = document.createElement("img")
+        img.setAttribute("src", "./assets/img/content-1.png")
+        eventBox.appendChild(img)
+
+        const eventDetail = document.createElement("div")
+        event.classList.add("event-detail")
+        
+        const eventTitle = document.createElement("div")
+        eventTitle.textContent = event
+        eventDetail.appendChild(eventBox)
+
+        const eventDate = document.createElement("div")
+        eventDate.textContent = event
+        eventDetail.appendChild(eventBox)
+
+        const attendees = document.createElement("div")
+
+        const attendeesDiv = document.createElement("div")
+
+        const avatar1 = document.createElement("img")
+        img.setAttribute("src", "./assets/img/avatar-1.png")
+        const avatar2 = document.createElement("img")
+        img.setAttribute("src", "./assets/img/avatar-2.png")
+        const avatar3 = document.createElement("img")
+        img.setAttribute("src", "./assets/img/avatar-3.png")
+        const avatar4 = document.createElement("img")
+        img.setAttribute("src", "./assets/img/avatar-.png")
+        attendeesDiv.appendChild(avatar1)  
+        attendeesDiv.appendChild(avatar2)  
+        attendeesDiv.appendChild(avatar3)  
+        attendeesDiv.appendChild(avatar4)
+        attendees.appendChild(attendeesDiv)
+        eventDetail.appendChild(attendees)
+
+
+        event.appendChild(eventBox)
+
         const detailEventEven = ["See it in Gold Class","Thu, 16 Nov, 7:00 PM"]
         const detailEventOdd = ["Sights & Sounds Exhibition","Wed, 15 Nov, 4:00 M"]
         function textEventGenerate(target , array) {
@@ -366,6 +427,7 @@
         textEventGenerate("detail-3" , detailEventOdd)
         textEventGenerate("detail-4" , detailEventEven)
         textEventGenerate("detail-5" , detailEventOdd)
+        //event content
 
         const footer1 = ["About us","Features","Blog","Payments","Mobile App"]
         const footer2 = ["Booking","Create Event","Discover","Register"]

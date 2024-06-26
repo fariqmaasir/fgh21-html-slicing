@@ -17,17 +17,31 @@
       <div class="outer">
         <div class="upper">
           <div class="logo">
-            <img src="./assets/icon/logo.png" alt="" />
-            <span class="blue">We<span class="red">tick</span></span>
+            <a href="index.html">
+              <img src="./assets/icon/logo.png" alt="" />
+              <span class="blue">We<span class="red">tick</span></span>
+            </a>
           </div>
           <div>
-            <span class="upper-content">Home</span>
-            <span class="upper-content">Create Event</span>
-            <span class="upper-content">Location</span>
+            <span class="upper-content">
+              <a href="index.html">Home</a>
+            </span>
+            <span class="upper-content">
+              <a href="">Create Event</a>
+            </span>
+            <span class="upper-content">
+              <a href="#city">Location</a>
+            </span>
           </div>
           <div class="user">
-            <div class="user-icon"><img src="./assets/img/user.png" alt="" /></div>
-            <div>Jhon Tomson</div>
+            <a href="profile.html">
+              <div class="circle-border">
+                <div class="img-border">
+                  <img class="img-icon-user" src="./assets/img/man.png" alt="" />
+                </div>
+              </div>
+              <div>Jhon Tomson</div>
+            </a>
           </div>
         </div>
         <div class="inner">
@@ -155,7 +169,7 @@
                   </div>
                 </div>
                 <div>
-                  <button class="button-payment" type="submit">Checkout</button>
+                  <button id="checkout-button" class="button-payment" type="button">Checkout</button>
                 </div>
               </div>
             </div>
@@ -198,5 +212,11 @@
         </div>
       </div>
     </div>
+  <script>
+    const checkOutBtn = document.getElementById("checkout-button")
+    checkOutBtn.onclick = () =>{
+      window.location = "/payment.html"
+    }
+  </script>
   </body>
 </html>

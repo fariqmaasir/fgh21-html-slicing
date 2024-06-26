@@ -4,6 +4,10 @@
     font-style: normal;
     color: rgba(55, 58, 66, 1);
   }
+  a{
+    color: unset;
+    text-decoration: none;
+  }
   h2 {
     font-size: 14px;
   }
@@ -82,7 +86,7 @@
     background-color: #fff;
     border-bottom: 1px solid #ddd;
   }
-  .logo {
+  .logo > a {
     display: flex;
     align-items: center;
   }
@@ -111,7 +115,7 @@
     font-size: 14px;
     color: rgba(179, 184, 184, 1);
   }
-  .user {
+  .user > a {
     display: flex;
     align-items: center;
     gap: 15px;

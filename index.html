@@ -32,8 +32,10 @@
           <nav class="upper">
             <div class="nav-menu">
               <div class="logo">
-                <img src="./assets/icon/logo.png" alt="" />
-                <span class="blue">We<span class="red">tick</span></span>
+                <a href="index.html">
+                  <img src="./assets/icon/logo.png" alt="" />
+                  <span class="blue">We<span class="red">tick</span></span>
+                </a>
               </div>
               <div class="menu">
                 <button type="button" id="menu">
@@ -54,13 +56,13 @@
             </div>
             <div class="btn-nav" id="btn-nav">
               <div>
-                <button type="button" >Log in</button>
+                <button id="login-btn" type="button" >Log in</button>
               </div>
-              <button type="button">Sign Up</button>
+              <button id="signup-btn" type="button">Sign Up</button>
             </div>
           </nav>
           <div class="img-upper">
-            <img class="img-char" src="./assets/img//login.png" alt="" />
+            <img class="img-char" src="./assets/img/login.png" alt="" />
           </div>
           <div class="date-fam">
             <div class="event-fam">
@@ -266,6 +268,14 @@
     </body>
     </html>
       <script>
+        const loginBtn = document.getElementById("login-btn")
+        const signupBtn = document.getElementById("signup-btn")
+        loginBtn.onclick = () =>{
+          window.location = "/sign-in.html"
+        }
+        signupBtn.onclick = () =>{
+          window.location = "/sign-up.html"
+        }
         //navigation
         const menuBtn = document.getElementById("menu")
         const navCenter = document.getElementById("text-nav")
@@ -312,15 +322,11 @@
             date:"Wed, 15 Nov, 4:00 M",
             img:"./assets/img/content-1.png"
           },
-          {
-            title:"See it in Gold Class",
-            date:"Thu, 16 Nov, 7:00 PM",
-            img:"./assets/img/content-2.png"
-          },
         ]
         events.forEach( (e) =>{
         const event = document.getElementById("event")
         const eventBox = document.createElement("div")
+        eventBox.setAttribute("id","event-box")
         eventBox.classList.add("event-box")
 
         const img = document.createElement("img")
@@ -362,7 +368,14 @@
 
         event.appendChild(eventBox)
       })
+      const eventBox = document.getElementById("event-box")
 
+      eventBox.onclick =()=>{
+        window.location = "/event.html"
+      }
+      //event detail
+
+      //footer
         const footer1 = ["About us","Features","Blog","Payments","Mobile App"]
         const footer2 = ["Booking","Create Event","Discover","Register"]
         const footer3 = ["Partnership","Help","Terms Of Service","Privacy Policy","Sitemap"]

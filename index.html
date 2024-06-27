@@ -29,8 +29,8 @@
       </head>
       <body>
         <div>
-          <nav class="upper">
-            <div class="nav-menu">
+          <nav class="upper" id="navbar">
+            <!-- <div class="nav-menu">
               <div class="logo">
                 <a href="index.html">
                   <img src="./assets/icon/logo.png" alt="" />
@@ -59,7 +59,7 @@
                 <button id="login-btn" type="button" >Log in</button>
               </div>
               <button id="signup-btn" type="button">Sign Up</button>
-            </div>
+            </div> -->
           </nav>
           <div class="img-upper">
             <img class="img-char" src="./assets/img/login.png" alt="" />
@@ -265,35 +265,47 @@
             <div>© 2020 Wetick All Rights Reserved</div>
           </div>
       </div>
-    </body>
-    </html>
       <script>
-        const loginBtn = document.getElementById("login-btn")
-        const signupBtn = document.getElementById("signup-btn")
-        loginBtn.onclick = () =>{
-          window.location = "/sign-in.html"
-        }
-        signupBtn.onclick = () =>{
-          window.location = "/sign-up.html"
-        }
-        //navigation
-        const menuBtn = document.getElementById("menu")
-        const navCenter = document.getElementById("text-nav")
-        const navLog = document.getElementById("btn-nav")
-        menuBtn.onclick = ()=>{
-          if (navCenter.getAttribute("style")) {
-            navCenter.removeAttribute("style")
-          } else {
-            navCenter.setAttribute("style", "display: none")
-          }
+        const navbar = document.getElementById("navbar")
+        async function generateNavbar() {
+            try {
+                const response = await fetch('/assets/component/navbar.html');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.text();
+                document.getElementById('navbar').innerHTML = data;
+            } catch (error) {
+                console.error('Error fetching the navigation bar:', error);
+            }
+            const loginBtn = document.getElementById("login-btn")
+            const signupBtn = document.getElementById("signup-btn")
+            loginBtn.onclick = () =>{
+              window.location = "/sign-in.html"
+            }
+            signupBtn.onclick = () =>{
+              window.location = "/sign-up.html"
+            }
+            //navigation
+            const menuBtn = document.getElementById("menu")
+            const navCenter = document.getElementById("text-nav")
+            const navLog = document.getElementById("btn-nav")
+            menuBtn.onclick = ()=>{
+              if (navCenter.getAttribute("style")) {
+                navCenter.removeAttribute("style")
+              } else {
+                navCenter.setAttribute("style", "display: none")
+              }
 
-          if (navLog.getAttribute("style")) {
-            navLog.removeAttribute("style")
-          } else {
-            navLog.setAttribute("style", "display: none")
-          }
+              if (navLog.getAttribute("style")) {
+                navLog.removeAttribute("style")
+              } else {
+                navLog.setAttribute("style", "display: none")
+              }
+            }
+            //navigation
         }
-        //navigation
+        generateNavbar()
 
         //event content
         const events = [

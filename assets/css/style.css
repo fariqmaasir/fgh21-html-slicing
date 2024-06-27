@@ -126,6 +126,7 @@ a{
 }
 .event{
   display: flex;
+  width: 100%;
   gap: 30px;
   /* margin-left: 120px; */
   overflow-x: scroll;
@@ -296,6 +297,7 @@ ul{
   height: 350px;
   border-radius: 40px;
   overflow: hidden;
+  flex-shrink: 0;
   background-color: rgba(51, 102, 255, 1);
 }
 .border-category .border-category-img{
@@ -356,6 +358,7 @@ ul{
   height: 376px;
   border-radius: 40px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .event-box img {

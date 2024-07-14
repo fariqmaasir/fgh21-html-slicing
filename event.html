@@ -15,35 +15,7 @@
   <body>
     <div class="base">
       <div class="outer">
-        <div class="upper">
-          <div class="logo">
-            <a href="index.html">
-              <img src="./assets/icon/logo.png" alt="" />
-              <span class="blue">We<span class="red">tick</span></span>
-            </a>
-          </div>
-          <div>
-            <span class="upper-content">
-              <a href="index.html">Home</a>
-            </span>
-            <span class="upper-content">
-              <a href="create-event.html">Create Event</a>
-            </span>
-            <span class="upper-content">
-              <a href="#city">Location</a>
-            </span>
-          </div>
-          <div class="user">
-            <a href="profile.html">
-              <div class="circle-border">
-                <div class="img-border">
-                  <img class="img-icon-user" src="./assets/img/man.png" alt="" />
-                </div>
-              </div>
-              <div>Jhon Tomson</div>
-            </a>
-          </div>
-        </div>
+        <nav id="navbar"></nav>
         <div class="inner">
           <div class="inner-separator">
             <div class="left">
@@ -54,15 +26,55 @@
               </div>
             </div>
             <div class="right">
-              <h3>Sights & Sounds</h3>
-              <h3>Exhibiton</h3>
-              <span><img class="attributes" src="./assets/icon/map-pin.svg" alt="" /></span>
-              <span>Jakarta, Indonesia</span>
-              <span><img class="attributes" src="./assets/icon/clock.svg" alt="" /></span>
-              <span>Wed, 15 Nov, 4:00 PM</span>
-              <div><h4>Attendees</h4></div>
-              <div><img src="./assets/img/attendees.png" alt="" /></div>
-              <hr />
+              <div class="query-content">
+                <div class="event-box">
+                  <img src="./assets/img/content-1.png" alt="" />
+                  <div class="event-detail">
+                    <div>
+                      <h3>Sights & Sounds Exhibiton</h3>
+                      <span><img src="./assets/icon/heart.png" alt="" /></span>
+                    </div>
+                    <div>
+                      <div>
+                        <img
+                          class="attributes"
+                          src="./assets/icon/map-pin.svg"
+                          alt=""
+                        />
+                        <span>Jakarta, Indonesia</span>
+                      </div>
+                      <div>
+                        <img
+                          class="attributes"
+                          src="./assets/icon/clock.svg"
+                          alt=""
+                        />
+                        <span>Wed, 15 Nov, 4:00 PM</span>
+                      </div>
+                    </div>
+                    <div><h4>Attendees</h4></div>
+                    <div><img src="./assets/img/attendees.png" alt="" /></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Sights & Sounds</h3>
+                <h3>Exhibiton</h3>
+                <span
+                  ><img
+                    class="attributes"
+                    src="./assets/icon/map-pin.svg"
+                    alt=""
+                /></span>
+                <span>Jakarta, Indonesia</span>
+                <span
+                  ><img class="attributes" src="./assets/icon/clock.svg" alt=""
+                /></span>
+                <span>Wed, 15 Nov, 4:00 PM</span>
+                <div><h4>Attendees</h4></div>
+                <div><img src="./assets/img/attendees.png" alt="" /></div>
+                <hr />
+              </div>
               <h3>Event Detail</h3>
               <h5>
                 After his controversial art exhibition 'Tear and Consume' back
@@ -73,54 +85,66 @@
               <div>
                 <img src="./assets/img/map.png" alt="" />
               </div>
-              <button id="buy-btn" type="button">Buy Ticket</button>
+              <button id="buy-btn" class="button" type="button">
+                Buy Ticket
+              </button>
             </div>
           </div>
         </div>
-        <div class="lower">
-          <div>
-            <div class="logo-lower">
-              <div class="logo">
-                <img src="./assets/icon/logo.png" alt="" />
-                <span class="blue">We<span class="red">tick</span></span>
-              </div>
-              <div>
-                Find events you love with our
-                <div><img src="./assets/img/social_media.png" alt="" /></div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="lower-title-text">Wetick</div>
-            <div class="lower-content-text">About us</div>
-            <div class="lower-content-text">Features</div>
-            <div class="lower-content-text">Blog</div>
-            <div class="lower-content-text">Payments</div>
-            <div class="lower-content-text">Mobile App</div>
-          </div>
-          <div>
-            <div class="lower-title-text">Features</div>
-            <div class="lower-content-text">Booking</div>
-            <div class="lower-content-text">Create Event</div>
-            <div class="lower-content-text">Discover</div>
-            <div class="lower-content-text">Register</div>
-          </div>
-          <div>
-            <div class="lower-title-text">Company</div>
-            <div class="lower-content-text">Partnership</div>
-            <div class="lower-content-text">Help</div>
-            <div class="lower-content-text">Terms Of Service</div>
-            <div class="lower-content-text">Privacy Policy</div>
-            <div class="lower-content-text">Sitemap</div>
-          </div>
-        </div>
+        <footer id="footer"></footer>
       </div>
     </div>
     <script>
-      const buyTicketBtn = document.getElementById("buy-btn")
-      buyTicketBtn.onclick = () =>{
-          window.location = "/booking.html"
+      const navbar = document.getElementById("navbar");
+      async function generateNavbar() {
+        try {
+          const response = await fetch("/assets/component/navbar-user.html");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.text();
+          navbar.innerHTML = data;
+        } catch (error) {
+          console.error("Error fetching the navigation bar:", error);
+        }
+        //navigation
+        const menuBtn = document.getElementById("menu");
+        const navCenter = document.getElementById("text-nav");
+        const navUser = document.getElementById("user");
+        menuBtn.onclick = () => {
+          if (navCenter.getAttribute("style")) {
+            navCenter.removeAttribute("style");
+          } else {
+            navCenter.setAttribute("style", "display: none");
+          }
+
+          if (navUser.getAttribute("style")) {
+            navUser.removeAttribute("style");
+          } else {
+            navUser.setAttribute("style", "display: none");
+          }
+        };
+        //navigation
       }
+      generateNavbar();
+      const footer = document.getElementById("footer");
+      async function generatefooter() {
+        try {
+          const response = await fetch("/assets/component/footer.html");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.text();
+          document.getElementById("footer").innerHTML = data;
+        } catch (error) {
+          console.error("Error fetching the navigation bar:", error);
+        }
+      }
+      generatefooter();
+      const buyTicketBtn = document.getElementById("buy-btn");
+      buyTicketBtn.onclick = () => {
+        window.location = "/booking.html";
+      };
     </script>
   </body>
 </html>

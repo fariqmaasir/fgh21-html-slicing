@@ -45,36 +45,36 @@
           <div>
             <button type="submit">Sign In</button>
           </div>
-        </form>
-        <div class="socmed-group">
-          <div>or sign in with</div>
-          <div class="socmed">
-            <div class="socmed-border">
+          <div class="socmed-group">
+            <div>or sign in with</div>
+            <div class="socmed">
+              <div class="socmed-border">
                 <img src="./assets/icon/google.png" alt="" />
-            </div>
-            <div class="socmed-border">
-              <img src="./assets/icon/facebook.png" alt="" />
+              </div>
+              <div class="socmed-border">
+                <img src="./assets/icon/facebook.png" alt="" />
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <script>
-      const userEmail = "user@mail.com"
-      const userPassword = "fazz101"      
-      const adminEmail = "admin@mail.com"
-      const adminPassword = "admin1"
+      const userEmail = "user@mail.com";
+      const userPassword = "fazz101";
+      const adminEmail = "admin@mail.com";
+      const adminPassword = "admin1";
       function checkData(event) {
-        event.preventDefault()
-        const name = event.target.name.value
-        const email = event.target.email.value
-        const password = event.target.password.value
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
         if (email === userEmail && password === userPassword) {
-          window.alert(`welcome, ${name}` )
-        } else if(email === adminEmail && password === adminPassword){
-          window.alert(`welcome, admin ${name}` )
+          window.alert(`welcome, ${name}`);
+        } else if (email === adminEmail && password === adminPassword) {
+          window.alert(`welcome, admin ${name}`);
         } else {
-          window.alert('your email or password is wrong')
+          window.alert("your email or password is wrong");
         }
       }
     </script>

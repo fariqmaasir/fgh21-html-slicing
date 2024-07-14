@@ -3,30 +3,37 @@
   font-weight: 400;
   font-style: normal;
 }
+@media (max-width: 768px) {
+  .left {
+    display: none;
+  }
+}
 .left {
   flex: 70%;
   background-color: #3366ff;
 }
-.left div{
+.left div {
   padding-right: 100px;
   padding-left: 100px;
   width: 550px;
   height: 480px;
 }
-.left div img{
+.left div img {
   width: 100%;
   height: 100%;
 }
 .right {
   flex: 30%;
-  padding: 100px;
-  padding-top: 200px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body {
-    margin: -1px;
-    padding: -1px;
+  margin: 0px;
+  padding: 0px;
 }
-.logo{
+.logo {
   display: flex;
   align-items: center;
 }
@@ -40,9 +47,10 @@ h1 {
 h3 {
   font-size: 14px;
 }
-.input-form{
+.input-form {
   display: flex;
   flex-direction: column;
+  width: 315px;
   gap: 10px;
 }
 .input-box {
@@ -56,37 +64,37 @@ h3 {
   height: 55px;
   font-size: 14px;
 }
-.input-box input{
+.input-box input {
   width: 230px;
   display: flex;
   border: none;
 }
-.input-box div{
+.input-box div {
   height: 24px;
   width: 24px;
   padding-left: 30px;
   padding-right: 30px;
 }
-.input-box img{
+.input-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.forget-pass{
+.forget-pass {
   text-align: end;
 }
-.forget-pass a{
+.forget-pass a {
   text-decoration: none;
 }
-.socmed-group{
+.socmed-group {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-.socmed-border{
-  border: 1px solid #3366FF;
+.socmed-border {
+  border: 1px solid #3366ff;
   border-radius: 6px;
   width: 95px;
   height: 52px;
@@ -94,11 +102,11 @@ h3 {
   align-items: center;
   justify-content: center;
 }
-.socmed{
+.socmed {
   display: flex;
   gap: 15px;
 }
-.socmed-border div{
+.socmed-border div {
   width: 24px;
   height: 24px;
 }
@@ -111,7 +119,7 @@ button {
   color: white;
   font-size: 16px;
   font-weight: 600;
-  box-shadow: 0px 8px 10px #2395FF4D;
+  box-shadow: 0px 8px 10px #2395ff4d;
 }
 .img-login {
   display: block;
